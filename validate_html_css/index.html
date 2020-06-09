@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1 - 1733412</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation-float.css" />
+    <link rel="stylesheet" href="css/customize.css" />
+    <link rel="stylesheet" href="icon/all.css" />
+	<link rel="stylesheet" href="css/animista.css" />
+  </head>
+  <body>
+    <!-- logo and top-menu-->
+    <div class="row">
+        <div class="columns small-12 medium-3">
+            <div class="logo">
+				<a href="/index.php"> 
+					<img src="/images/logo.png" alt="" class="img-logo" />
+				</a>
+            </div>
+        </div>
+        <div class="columns small-12 medium-9 top-menu-wrap">
+
+            <div class="topnav" id="myTopnav">
+                <a href="/intro.php">Giới thiệu</a>
+                <a href="/tour.php">Tour Du lịch</a>
+                <a href="/price.php">Bảng giá</a>
+                <a href="/contact.php">Liên hệ</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end logo and top-menu-->
+
+    <script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+    </script>
+
+    <!-- slideshow -->
+    <div class="row">
+        <div class="large-12 columns">
+
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/condao.jpg" alt="Côn Đảo" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/phong-ks.jpg" alt="Phòng khách sạn" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/sim-du-lich.jpg" alt="Sim du lịch" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+    </script>
+    <!-- end slideshow -->
+<!-- tour khuyen mai -->
+<div class="row">
+    <div class="large-12 columns text-center">
+        <h3 class="tracking-in-expand-fwd">Tour đang khuyễn mãi</h3>
+        <p>Bạn cần tư vấn và đặt tour hãy gọi 19001900.</p>
+    </div>
+    <div class="columns small-12 medium-4 mg-bot10">
+        <div class="img-tourist-wrap">
+            <div class="img-tourist">
+                <img src="/images/london.jpg" alt="london" class="km-img">
+            </div>
+            <div class="tour-price">
+                <h5>London 8 ngày</h5>
+                <div>
+                    <span class="price-o">85triệu</span>
+                    <span class="price-n">55triệu </span>
+                    <span class="tour-order"> Đặt vé</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns small-12 medium-4 mg-bot10">
+        <div class="img-tourist-wrap">
+            <div class="img-tourist">
+                <img src="/images/newyork.jpg" alt="newyork" class="km-img">
+            </div>
+            <div class="tour-price">
+                <h5>New York 10 ngày</h5>
+                <div>
+                    <span class="price-o">95triệu</span>
+                    <span class="price-n">60triệu</span>
+                    <span class="tour-order"> Đặt vé</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns small-12 medium-4 mg-bot10">
+        <div class="img-tourist-wrap">
+            <div class="img-tourist">
+                <img src="/images/dubai.jpg" alt="dubai" class="km-img">
+            </div>
+            <div class="tour-price">
+                <h5>Dubai 5 ngày</h5>
+                <div>
+                    <span class="price-o">69triệu</span>
+                    <span class="price-n">45triệu</span>
+                    <span class="tour-order"> Đặt vé</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- tour yeu thich -->
+<div class="row">
+    <div class="large-12 columns text-center mg-top25">
+        <h3 class="tracking-in-expand-fwd">Tour du lịch yêu thích</h3>
+        <p>Các địa điểm du lịch trong nước và nước ngoài.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns small-12 medium-3 tourist-md mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/vinh-ha-long.jpg" alt="vinh ha long" class="tn-img" />
+        </div>
+        <div class="bottom-center">VỊNH HẠ LONG</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-12 medium-3 tourist-md mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/sapa.jpg" alt="sapa" class="tn-img" />
+        </div>
+        <div class="bottom-center">SAPA</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-12 medium-3 tourist-md mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/da-nang.jpg" alt="Đà Nẵng" class="tn-img" />
+        </div>
+        <div class="bottom-center">ĐÀ NẴNG</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-12 medium-3 tourist-md mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/qui-nhon.jpg" alt="Qui Nhơn" class="tn-img" />
+        </div>
+        <div class="bottom-center">QUI NHƠN</div>
+        <!-- ... -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns text-center">
+        <p class="dashedline"></p>
+    </div>
+</div>
+
+<div class="row mg-bot25">
+    <div class="columns small-6 medium-2 tourist-sm mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/chau-au.jpg" alt="Châu Âu" class="nn-img" />
+        </div>
+
+        <div class="bottom-center">CHÂU ÂU</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-6 medium-2 tourist-sm mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/chau-a.jpg" alt="Châu Á" class="nn-img" />
+        </div>
+        <div class="bottom-center">CHÂU Á</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-6 medium-2 tourist-sm mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/chau-uc.jpg" alt="Châu Úc" class="nn-img" />
+        </div>
+        <div class="bottom-center">CHÂU ÚC</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-6 medium-2 tourist-sm mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/chau-my.jpg" alt="Châu Mỹ" class="nn-img" />
+        </div>
+        <div class="bottom-center">CHÂU MỸ</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-6 medium-2 tourist-sm mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/chau-phi.jpg" alt="Châu Phi" class="nn-img" />
+        </div>
+        <div class="bottom-center">CHÂU PHI</div>
+        <!-- ... -->
+    </div>
+    <div class="columns small-6 medium-2 tourist-sm mg-bot10">
+        <div class="img-tourist">
+            <img src="/images/chau-nam-cuc.jpg" alt="Châu Nam Cực" class="nn-img" />
+        </div>
+        <div class="bottom-center">NAM CỰC</div>
+        <!-- ... -->
+    </div>
+</div>
+<div class="clear"></div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="large-12 columns subcribed bgc036">
+            <div class="columns large-2">
+                <div class="subcribed-background hidden-display"></div>
+            </div>
+            <div class="columns small-12 large-7">
+                <div class="subcribed-info">
+                    <h4>Đăng ký nhận THÔNG TIN về SỰ KIỆN & ĐỊA ĐIỂM du lịch.</h4>
+                </div>
+            </div>
+            <div class="columns small-12 large-5">
+                <div class="subscribed-name mg-top16">Họ tên</div>
+                <input type="text" name="fullname" id="fullname" />
+                <div class="subscribed-name">Email</div>
+                <input type="email" name="email" id="email" />
+                <a class="button primary" href="#">Đăng ký</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="footer-wrap">
+          <div class="text-center footer-info">
+            Bản quyền 2020 © Công ty TNHH Dịch vụ Lữ hành TravelAgency <br />
+            <a href="/index.php"><span>Trang chủ | </span></a><a href="/intro.php"><span>Giới thiệu | </span></a><a href="/tour.php"><span>Tour du lịch | </span></a><a href="/intro.php"><span>Bảng giá | </span></a><a href="/contact.php"><span>Liên hệ</span></a><br />
+            <span style="color:#4267B2;padding-right:10px;" class="fab fa-facebook-square fa-2x"></span>
+			<span style="color:#DB4437;" class="fab fa-youtube-square fa-2x"></span>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1 - 1733412</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation-float.css" />
+    <link rel="stylesheet" href="css/customize.css" />
+    <link rel="stylesheet" href="icon/all.css" />
+	<link rel="stylesheet" href="css/animista.css" />
+  </head>
+  <body>
+    <!-- logo and top-menu-->
+    <div class="row">
+        <div class="columns small-12 medium-3">
+            <div class="logo">
+				<a href="/index.php"> 
+					<img src="/images/logo.png" alt="" class="img-logo" />
+				</a>
+            </div>
+        </div>
+        <div class="columns small-12 medium-9 top-menu-wrap">
+
+            <div class="topnav" id="myTopnav">
+                <a href="/intro.php">Giới thiệu</a>
+                <a href="/tour.php">Tour Du lịch</a>
+                <a href="/price.php">Bảng giá</a>
+                <a href="/contact.php">Liên hệ</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end logo and top-menu-->
+
+    <script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+    </script>
+
+    <!-- slideshow -->
+    <div class="row">
+        <div class="large-12 columns">
+
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/condao.jpg" alt="Côn Đảo" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/phong-ks.jpg" alt="Phòng khách sạn" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/sim-du-lich.jpg" alt="Sim du lịch" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+    </script>
+    <!-- end slideshow -->
+<div class="row">
+    <div class="large-12 columns text-center">
+        <h3 class="tracking-in-expand-fwd">LIÊN HỆ</h3>
+        <p>Các yêu cầu và ý kiến đóng góp của quý vị xin vui lòng liên hệ</p>
+    </div>
+
+    <div class="large-12 columns">
+        <form>
+            <div class="grid-container bgcf4 mg-botfix">
+                <div class="grid-x grid-padding-x">
+                    <div class="medium-12 cell mg-top16">
+
+                    </div>
+                    <div class="medium-4 cell">
+                        <label><span class="star">Loại thông tin</span>
+                            <select>
+                                <option value="husker">Đặt tour</option>
+                                <option value="starbuck">Hỗ trợ</option>
+                                <option value="hotdog">Góp ý</option>
+                                <option value="apollo">Khiếu nại</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="medium-4 cell">
+                        <label><span class="star">Họ tên</span>
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-4 cell">
+                        <label><span class="star">Email</span>
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-4 cell">
+                        <label><span class="star">Điện thoại</span>
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-4 cell">
+                        <label>Tên công ty
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-4 cell">
+                        <label>Mã khách hàng
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-12 cell">
+                        <label>Địa chỉ
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-12 cell">
+                        <label><span class="star">Tiêu đề</span>
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                    <div class="medium-12 cell">
+                        <label>
+                            <span class="star">Nội dung liên hệ</span>
+                            <textarea placeholder="" rows="4" cols="5"></textarea>
+                        </label>
+                    </div>
+                    <div class="medium-12 cell text-center">
+                        <a class="button primary" href="#">Gửi</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="footer-wrap">
+          <div class="text-center footer-info">
+            Bản quyền 2020 © Công ty TNHH Dịch vụ Lữ hành TravelAgency <br />
+            <a href="/index.php"><span>Trang chủ | </span></a><a href="/intro.php"><span>Giới thiệu | </span></a><a href="/tour.php"><span>Tour du lịch | </span></a><a href="/intro.php"><span>Bảng giá | </span></a><a href="/contact.php"><span>Liên hệ</span></a><br />
+            <span style="color:#4267B2;padding-right:10px;" class="fab fa-facebook-square fa-2x"></span>
+			<span style="color:#DB4437;" class="fab fa-youtube-square fa-2x"></span>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
